@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dicl1p4k1jjnl"]
+[gd_scene load_steps=9 format=3 uid="uid://dicl1p4k1jjnl"]
 
 [ext_resource type="Script" path="res://game/rooms/attic/room_attic.gd" id="1_5yp0j"]
 [ext_resource type="PackedScene" uid="uid://dv6ny6yrqcl03" path="res://game/rooms/attic/walkable_areas/floor/walkable_area_floor.tscn" id="2_gjehx"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://b0sl13ulx085q" path="res://game/rooms/attic/props/bannkreis/prop_bannkreis.tscn" id="5_oqux2"]
 [ext_resource type="Texture2D" uid="uid://bho8rwxnvsk8c" path="res://game/rooms/attic/props/bannkreis/bannkreis.png" id="6_urnb7"]
 [ext_resource type="PackedScene" uid="uid://dxhv71jg255fm" path="res://game/rooms/attic/hotspots/window/hotspot_window.tscn" id="7_0khcs"]
-[ext_resource type="PackedScene" uid="uid://dbwcn7ownvmgn" path="res://game/rooms/attic/markers/spawn/marker_spawn.tscn" id="8_eag6j"]
 [ext_resource type="PackedScene" uid="uid://u5sstw7dnw0g" path="res://game/characters/skully/character_skully.tscn" id="9_21om0"]
 
 [node name="RoomAttic" type="Node2D"]
@@ -53,10 +52,6 @@ interaction_polygon_position = Vector2(-329, -140)
 [node name="Regions" type="Node2D" parent="."]
 
 [node name="Markers" type="Node2D" parent="."]
-
-[node name="Spawn" parent="Markers" instance=ExtResource("8_eag6j")]
-position = Vector2(200, 600)
-gizmo_extents = 47.3
 
 [node name="Characters" type="Node2D" parent="."]
 
