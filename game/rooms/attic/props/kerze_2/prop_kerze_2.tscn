@@ -1,15 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bye5wgbgis1pl"]
+[gd_scene load_steps=2 format=3 uid="uid://b4j114i06yhkk"]
 
-[ext_resource type="Script" path="res://game/rooms/attic/props/background/prop_background.gd" id="1_jrwqq"]
+[ext_resource type="Script" path="res://game/rooms/attic/props/kerze_2/prop_kerze_2.gd" id="1_d2u1e"]
 
-[node name="Background" type="Area2D"]
-z_index = -1
-input_pickable = false
-script = ExtResource("1_jrwqq")
-script_name = "Background"
-description = "Background"
-clickable = false
-baseline = -324
+[node name="Kerze2" type="Area2D"]
+script = ExtResource("1_d2u1e")
+script_name = "Kerze2"
+description = "Kerze 2"
 cursor = 1
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
@@ -20,5 +16,6 @@ polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(0.5, 0.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

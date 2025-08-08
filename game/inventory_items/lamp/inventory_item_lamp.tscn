@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4k6am0yjtysj"]
+
+[ext_resource type="Texture2D" uid="uid://jkhlqjtpktip" path="res://Assets/Lampe_256.png" id="1_3l81g"]
+[ext_resource type="Script" path="res://game/inventory_items/lamp/inventory_item_lamp.gd" id="1_udu3w"]
+
+[node name="ItemLamp" type="TextureRect"]
+texture_filter = 1
+offset_right = 3000.0
+offset_bottom = 6000.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_3l81g")
+stretch_mode = 5
+script = ExtResource("1_udu3w")
+script_name = "Lamp"
+description = "Lamp"

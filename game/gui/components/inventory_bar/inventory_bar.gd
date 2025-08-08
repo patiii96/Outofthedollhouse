@@ -2,8 +2,9 @@ extends Control
 
 @export var always_visible := false
 @export var hide_when_gui_is_blocked := false
-## Defines the height in pixels of the zone where moving the mouse in the top of the screen will
-## make the bar to show. Note: This value will be affected by the Experimental Scale GUI checkbox
+## Defines the size in pixels of the input zone where moving the mouse will make the bar show.
+## For TOP/BOTTOM directions, this is the height. For LEFT/RIGHT directions, this is the width.
+## Note: This value will be affected by the Experimental Scale GUI checkbox
 ## in Project Settings > Popochiu > GUI.
 @export var input_zone_height := 4
 

@@ -12,9 +12,11 @@ func _on_click() -> void:
 	E.command_fallback()
 	# For example, you can make the player character walk to this prop, gaze at it, and then say
 	# something:
-#	await C.player.walk_to_clicked()
-#	await C.player.face_clicked()
-#	await C.player.say("Not picking that up!")
+	await C.player.walk_to_clicked()
+	await C.player.face_clicked()
+	await C.player.say("Yoink!")
+	I.Lamp.add()
+	self.hide()
 
 
 func _on_double_click() -> void:

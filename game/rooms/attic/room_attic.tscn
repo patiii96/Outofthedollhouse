@@ -56,7 +56,6 @@ scale = Vector2(0.897155, 0.894366)
 texture = ExtResource("4_yvt3s")
 baseline = -360
 walk_to_point = Vector2(320.638, -368.583)
-interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Bannkreis" parent="Props" instance=ExtResource("5_oqux2")]
 position = Vector2(583, 531)
@@ -162,30 +161,50 @@ baseline = 212
 walk_to_point = Vector2(-4.49487, 184.292)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
-[node name="Kerze" parent="Props" instance=ExtResource("25_um5t5")]
-position = Vector2(491, 460)
+[node name="Kerze" parent="Props" groups=["Kerzen"] instance=ExtResource("25_um5t5")]
+position = Vector2(487, 460)
 texture = ExtResource("26_pxkuw")
-frames = 4
+frames = 5
+v_frames = 0
+walk_to_point = Vector2(-3.53549, 10.6066)
+always_on_top = true
+interaction_polygon = PackedVector2Array(8, -29, 29, -28, 30, 30, 10, 29)
 
-[node name="Kerze2" parent="Props" instance=ExtResource("25_um5t5")]
-position = Vector2(624, 451)
+[node name="Kerze5" parent="Props" groups=["Kerzen"] instance=ExtResource("25_um5t5")]
+position = Vector2(674, 519)
 texture = ExtResource("26_pxkuw")
-frames = 4
+frames = 5
+v_frames = 0
+walk_to_point = Vector2(-3.53549, 10.6066)
+always_on_top = true
+interaction_polygon = PackedVector2Array(8, -29, 29, -28, 30, 30, 10, 29)
 
-[node name="Kerze3" parent="Props" instance=ExtResource("25_um5t5")]
-position = Vector2(468, 535)
+[node name="Kerze4" parent="Props" groups=["Kerzen"] instance=ExtResource("25_um5t5")]
+position = Vector2(575, 575)
 texture = ExtResource("26_pxkuw")
-frames = 4
+frames = 5
+v_frames = 0
+walk_to_point = Vector2(-3.53549, 10.6066)
+always_on_top = true
+interaction_polygon = PackedVector2Array(8, -29, 29, -28, 30, 30, 10, 29)
 
-[node name="Kerze4" parent="Props" instance=ExtResource("25_um5t5")]
-position = Vector2(585, 581)
+[node name="Kerze2" parent="Props" groups=["Kerzen"] instance=ExtResource("25_um5t5")]
+position = Vector2(615, 448)
 texture = ExtResource("26_pxkuw")
-frames = 4
+frames = 5
+v_frames = 0
+walk_to_point = Vector2(-3.53549, 10.6066)
+always_on_top = true
+interaction_polygon = PackedVector2Array(8, -29, 29, -28, 30, 30, 10, 29)
 
-[node name="Kerze5" parent="Props" instance=ExtResource("25_um5t5")]
-position = Vector2(679, 524)
+[node name="Kerze3" parent="Props" groups=["Kerzen"] instance=ExtResource("25_um5t5")]
+position = Vector2(460, 528)
 texture = ExtResource("26_pxkuw")
-frames = 4
+frames = 5
+v_frames = 0
+walk_to_point = Vector2(-3.53549, 10.6066)
+always_on_top = true
+interaction_polygon = PackedVector2Array(8, -29, 29, -28, 30, 30, 10, 29)
 
 [node name="Luke" parent="Props" instance=ExtResource("29_m5v33")]
 position = Vector2(275, 575)
