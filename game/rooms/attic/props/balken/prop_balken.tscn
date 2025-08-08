@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://brhwlah32nfnn"]
+
+[ext_resource type="Script" path="res://game/rooms/attic/props/balken/prop_balken.gd" id="1_6mydo"]
+
+[node name="Balken" type="Area2D"]
+input_pickable = false
+script = ExtResource("1_6mydo")
+script_name = "Balken"
+description = "Balken"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

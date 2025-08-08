@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://tgk5xp7u8ohm"]
+
+[ext_resource type="Script" path="res://game/rooms/attic/props/kiste/prop_kiste.gd" id="1_onvtt"]
+[ext_resource type="Texture2D" uid="uid://tufg4jxqadc8" path="res://Assets/box.png" id="2_p73r4"]
+
+[node name="Kiste" type="Area2D"]
+input_pickable = false
+script = ExtResource("1_onvtt")
+texture = ExtResource("2_p73r4")
+script_name = "Kiste"
+description = "Kiste"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_p73r4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bknlo43p6d3vg"]
+[gd_scene load_steps=3 format=3 uid="uid://bknlo43p6d3vg"]
 
+[ext_resource type="Texture2D" uid="uid://d4mxy80pwjodu" path="res://game/inventory_items/zeiger/Stundenzeiger.png" id="1_0o0kb"]
 [ext_resource type="Script" path="res://game/inventory_items/zeiger/inventory_item_zeiger.gd" id="1_k2lni"]
 
 [node name="ItemZeiger" type="TextureRect"]
@@ -7,6 +8,7 @@ texture_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 4
 mouse_filter = 0
+texture = ExtResource("1_0o0kb")
 stretch_mode = 5
 script = ExtResource("1_k2lni")
 script_name = "Zeiger"

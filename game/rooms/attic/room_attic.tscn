@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dicl1p4k1jjnl"]
+[gd_scene load_steps=34 format=3 uid="uid://dicl1p4k1jjnl"]
 
 [ext_resource type="Script" path="res://game/rooms/attic/room_attic.gd" id="1_5yp0j"]
 [ext_resource type="PackedScene" uid="uid://dv6ny6yrqcl03" path="res://game/rooms/attic/walkable_areas/floor/walkable_area_floor.tscn" id="2_gjehx"]
@@ -11,10 +11,28 @@
 [ext_resource type="Texture2D" uid="uid://rmvgobg3f2lv" path="res://Assets/Hammer.png" id="8_qw2rm"]
 [ext_resource type="PackedScene" uid="uid://b1le7lmnujfio" path="res://game/rooms/attic/props/uhr_ganz/prop_uhr_ganz.tscn" id="9_5ispy"]
 [ext_resource type="PackedScene" uid="uid://u5sstw7dnw0g" path="res://game/characters/skully/character_skully.tscn" id="9_21om0"]
+[ext_resource type="Texture2D" uid="uid://dahwkq63qnai2" path="res://Assets/Spinnenweben.png" id="10_67wqu"]
 [ext_resource type="Texture2D" uid="uid://8secbl7vg1pj" path="res://Assets/Uhr_mit_Zeigern.png" id="10_11010"]
 [ext_resource type="Texture2D" uid="uid://bl5ve8vb1c7ew" path="res://Assets/Uhr_ohne_Zeiger.png" id="10_ngf68"]
 [ext_resource type="PackedScene" uid="uid://p8sjvf4u0x8e" path="res://game/rooms/attic/props/stundenzeiger/prop_stundenzeiger.tscn" id="12_0t5lf"]
 [ext_resource type="Texture2D" uid="uid://b2finom03fh20" path="res://Assets/Stundenzeiger.png" id="13_jk18t"]
+[ext_resource type="PackedScene" uid="uid://b6k3ycaovvugr" path="res://game/rooms/attic/props/bookshelf/prop_bookshelf.tscn" id="14_qylte"]
+[ext_resource type="Texture2D" uid="uid://de7fbr2dw0yv8" path="res://Assets/bookshelf.png" id="15_7npr1"]
+[ext_resource type="PackedScene" uid="uid://deanv41lhign0" path="res://game/rooms/attic/props/kasten/prop_kasten.tscn" id="16_g0lbm"]
+[ext_resource type="Texture2D" uid="uid://cvuiqavfuv7se" path="res://Assets/kasten.png" id="17_fq5hq"]
+[ext_resource type="PackedScene" uid="uid://ctm3334t6y7rs" path="res://game/rooms/attic/props/kleiderstaender/prop_kleiderstaender.tscn" id="18_6w35f"]
+[ext_resource type="Texture2D" uid="uid://dqof1ytklsabc" path="res://Assets/Kleiderständer.png" id="19_6jm5i"]
+[ext_resource type="PackedScene" uid="uid://tgk5xp7u8ohm" path="res://game/rooms/attic/props/kiste/prop_kiste.tscn" id="20_3c0pm"]
+[ext_resource type="PackedScene" uid="uid://d4a62ydfbe7vx" path="res://game/rooms/attic/props/kisteabgedeckt/prop_kisteabgedeckt.tscn" id="21_q85qx"]
+[ext_resource type="Texture2D" uid="uid://cm57n7b536sm3" path="res://Assets/KisteAbgedeckt.png" id="22_tv0qo"]
+[ext_resource type="PackedScene" uid="uid://brhwlah32nfnn" path="res://game/rooms/attic/props/balken/prop_balken.tscn" id="23_7tsn5"]
+[ext_resource type="Texture2D" uid="uid://bajqg8gjk4b87" path="res://Assets/Balken5.png" id="24_nlsgm"]
+[ext_resource type="PackedScene" uid="uid://e0umjaff1elm" path="res://game/rooms/attic/props/kerze/prop_kerze.tscn" id="25_um5t5"]
+[ext_resource type="Texture2D" uid="uid://w11yvl4nm7cb" path="res://Assets/KerzeMitAnimation.png" id="26_pxkuw"]
+[ext_resource type="PackedScene" uid="uid://b55d70p4ejee4" path="res://game/rooms/attic/props/spinnenweben/prop_spinnenweben.tscn" id="27_0letp"]
+[ext_resource type="PackedScene" uid="uid://bhnc3r506bl1" path="res://game/rooms/attic/props/luke/prop_luke.tscn" id="29_m5v33"]
+[ext_resource type="PackedScene" uid="uid://f3j2n5vsb4eu" path="res://game/rooms/attic/props/lamp/prop_lamp.tscn" id="30_og8ik"]
+[ext_resource type="Texture2D" uid="uid://b8g1kytifbds7" path="res://Assets/PeLaLicht2.png" id="31_r2mse"]
 
 [node name="RoomAttic" type="Node2D"]
 script = ExtResource("1_5yp0j")
@@ -38,7 +56,7 @@ walk_to_point = Vector2(320.638, -368.583)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Bannkreis" parent="Props" instance=ExtResource("5_oqux2")]
-position = Vector2(585, 562)
+position = Vector2(583, 531)
 scale = Vector2(0.662404, 0.601223)
 input_pickable = true
 texture = ExtResource("6_ms1p2")
@@ -48,17 +66,12 @@ walk_to_point = Vector2(-196.001, 1.39685)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 interaction_polygon_position = Vector2(4.52899, 24.9492)
 
-[node name="Hammer" parent="Props" instance=ExtResource("7_tr4mm")]
-position = Vector2(376, 544)
-rotation = -0.862734
-texture = ExtResource("8_qw2rm")
-baseline = -5
-walk_to_point = Vector2(-72, -9)
-interaction_polygon = PackedVector2Array(92.8472, -14.3703, 168.659, -10.707, 148.742, 32.5923, 100.043, 31.4841)
-interaction_polygon_position = Vector2(-126.864, -33.8207)
+[node name="Spinnenweben" parent="Props" instance=ExtResource("27_0letp")]
+position = Vector2(325, 311)
+texture = ExtResource("10_67wqu")
 
 [node name="UhrGanz" parent="Props" instance=ExtResource("9_5ispy")]
-position = Vector2(942, 276)
+position = Vector2(399, 322)
 input_pickable = true
 Uhrkaputt = ExtResource("10_ngf68")
 texture = ExtResource("10_11010")
@@ -67,11 +80,121 @@ walk_to_point = Vector2(93.4717, 172.092)
 interaction_polygon = PackedVector2Array(-53, -189, 51, -194, 52, 181, -58, 182)
 
 [node name="Stundenzeiger" parent="Props" instance=ExtResource("12_0t5lf")]
-position = Vector2(851, 528)
+position = Vector2(394, 501)
 rotation = 0.953335
 texture = ExtResource("13_jk18t")
 baseline = -12
 walk_to_point = Vector2(61.5183, 49.4976)
+
+[node name="Bookshelf" parent="Props" instance=ExtResource("14_qylte")]
+position = Vector2(1010, 366)
+input_pickable = true
+texture = ExtResource("15_7npr1")
+clickable = true
+walk_to_point = Vector2(46.021, 126.838)
+
+[node name="Kasten" parent="Props" instance=ExtResource("16_g0lbm")]
+position = Vector2(140, 321)
+input_pickable = true
+texture = ExtResource("17_fq5hq")
+clickable = true
+
+[node name="Kleiderstaender" parent="Props" instance=ExtResource("18_6w35f")]
+position = Vector2(1009, 458)
+input_pickable = true
+texture = ExtResource("19_6jm5i")
+clickable = true
+walk_to_point = Vector2(-74.6438, 40.9699)
+
+[node name="Kiste" parent="Props" instance=ExtResource("20_3c0pm")]
+position = Vector2(237, 461)
+walk_to_point = Vector2(-285.978, 201.343)
+
+[node name="Kiste2" parent="Props" instance=ExtResource("20_3c0pm")]
+position = Vector2(213, 482)
+rotation = -1.56492
+walk_to_point = Vector2(-285.978, 201.343)
+
+[node name="Hammer" parent="Props" instance=ExtResource("7_tr4mm")]
+position = Vector2(196, 500)
+rotation = -0.862734
+texture = ExtResource("8_qw2rm")
+baseline = -5
+walk_to_point = Vector2(-72, -9)
+interaction_polygon = PackedVector2Array(92.8472, -14.3703, 168.659, -10.707, 148.742, 32.5923, 100.043, 31.4841)
+interaction_polygon_position = Vector2(-126.864, -33.8207)
+
+[node name="Kiste3" parent="Props" instance=ExtResource("20_3c0pm")]
+position = Vector2(243, 495)
+rotation = 3.10997
+walk_to_point = Vector2(-285.978, 201.343)
+
+[node name="Kisteabgedeckt" parent="Props" instance=ExtResource("21_q85qx")]
+position = Vector2(1109, 436)
+input_pickable = true
+texture = ExtResource("22_tv0qo")
+clickable = true
+
+[node name="Kisteabgedeckt3" parent="Props" instance=ExtResource("21_q85qx")]
+position = Vector2(1105, 597)
+scale = Vector2(1.19032, 1.19614)
+input_pickable = true
+texture = ExtResource("22_tv0qo")
+clickable = true
+
+[node name="Kisteabgedeckt2" parent="Props" instance=ExtResource("21_q85qx")]
+position = Vector2(1077, 492)
+scale = Vector2(1.39722, 1.15415)
+input_pickable = true
+texture = ExtResource("22_tv0qo")
+clickable = true
+
+[node name="Balken" parent="Props" instance=ExtResource("23_7tsn5")]
+position = Vector2(578, 343)
+scale = Vector2(0.908527, 0.967801)
+input_pickable = true
+texture = ExtResource("24_nlsgm")
+clickable = true
+baseline = 212
+walk_to_point = Vector2(-4.49487, 184.292)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Kerze" parent="Props" instance=ExtResource("25_um5t5")]
+position = Vector2(491, 460)
+texture = ExtResource("26_pxkuw")
+frames = 4
+
+[node name="Kerze2" parent="Props" instance=ExtResource("25_um5t5")]
+position = Vector2(624, 451)
+texture = ExtResource("26_pxkuw")
+frames = 4
+
+[node name="Kerze3" parent="Props" instance=ExtResource("25_um5t5")]
+position = Vector2(468, 535)
+texture = ExtResource("26_pxkuw")
+frames = 4
+
+[node name="Kerze4" parent="Props" instance=ExtResource("25_um5t5")]
+position = Vector2(585, 581)
+texture = ExtResource("26_pxkuw")
+frames = 4
+
+[node name="Kerze5" parent="Props" instance=ExtResource("25_um5t5")]
+position = Vector2(679, 524)
+texture = ExtResource("26_pxkuw")
+frames = 4
+
+[node name="Luke" parent="Props" instance=ExtResource("29_m5v33")]
+position = Vector2(275, 575)
+baseline = -19
+walk_to_point = Vector2(143.126, 6.987)
+interaction_polygon = PackedVector2Array(-29, -21, 84, -18, 39, 31, -94, 28)
+
+[node name="Lamp" parent="Props" instance=ExtResource("30_og8ik")]
+position = Vector2(70, 581)
+texture = ExtResource("31_r2mse")
+baseline = -17
+walk_to_point = Vector2(73.6222, 20.7653)
 
 [node name="Hotspots" type="Node2D" parent="."]
 
@@ -89,4 +212,4 @@ interaction_polygon_position = Vector2(-329, -140)
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="CharacterSkully *" parent="Characters" instance=ExtResource("9_21om0")]
-position = Vector2(1006, 606)
+position = Vector2(792, 603)

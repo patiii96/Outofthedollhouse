@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://clm1pqund8f3g"]
+[gd_scene load_steps=2 format=3 uid="uid://b6k3ycaovvugr"]
 
-[ext_resource type="Script" path="res://game/rooms/attic/props/hammer/prop_hammer.gd" id="1_a3snl"]
+[ext_resource type="Script" path="res://game/rooms/attic/props/bookshelf/prop_bookshelf.gd" id="1_tdcwb"]
 
-[node name="Hammer" type="Area2D"]
-script = ExtResource("1_a3snl")
-script_name = "Hammer"
-description = "Hammer"
+[node name="Bookshelf" type="Area2D"]
+input_pickable = false
+script = ExtResource("1_tdcwb")
+script_name = "Bookshelf"
+description = "Bookshelf"
+clickable = false
 cursor = 1
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
@@ -16,6 +18,6 @@ polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(0.03, 0.03)
+scale = Vector2(0.5, 0.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -15,6 +15,9 @@ func _on_click() -> void:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
 	await C.player.say("Einz Zeiger.")
+	
+	R.get_prop("Stundenzeiger").hide()
+	I.Zeiger.add()
 
 
 func _on_double_click() -> void:

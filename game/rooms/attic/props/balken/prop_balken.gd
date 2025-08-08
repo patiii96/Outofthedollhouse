@@ -1,14 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1le7lmnujfio"]
-
-[sub_resource type="GDScript" id="GDScript_peag8"]
-script/source = "@tool
+@tool
 extends PopochiuProp
 # You can use E.queue([]) to trigger a sequence of events.
 # Use await E.queue([]) if you want to pause the excecution of
 # the function until the sequence of events finishes.
-@export var Uhrganz:Texture2D
-@export var Uhrkaputt:Texture2D
-var isbroken = false
 
 
 #region Virtual ####################################################################################
@@ -20,7 +14,7 @@ func _on_click() -> void:
 	# something:
 #	await C.player.walk_to_clicked()
 #	await C.player.face_clicked()
-#	await C.player.say(\"Not picking that up!\")
+#	await C.player.say("Not picking that up!")
 
 
 func _on_double_click() -> void:
@@ -35,7 +29,7 @@ func _on_right_click() -> void:
 	E.command_fallback()
 	# For example, you can make the player character gaze at this prop and then say something:
 #	await C.player.face_clicked()
-#	await C.player.say(\"A deck of cards\")
+#	await C.player.say("A deck of cards")
 
 
 # When the node is middle clicked
@@ -47,17 +41,12 @@ func _on_middle_click() -> void:
 # When the node is clicked and there is an inventory item selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	#E.command_fallback()
+	E.command_fallback()
 	# For example, you can make the player character say something when the Key item is used in this
 	# prop. Note that you have to change the name of the `_item` parameter to `item`.
-	if _item == I.Hammer:
-		await C.player.walk_to_clicked()
-		await C.player.face_clicked()
-		await C.player.say(\"SMASH!\")
-		isbroken = true
-		texture = Uhrkaputt
-		R.get_prop(\"Stundenzeiger\").show()
-		
+#	if item == I.Key:
+#		await C.player.say("I can't do that")
+
 
 # When an inventory item linked to this Prop (link_to_item) is removed from
 # the inventory (i.e. when it is used in something that makes use of the object).
@@ -81,24 +70,3 @@ func _on_linked_item_discarded() -> void:
 
 
 #endregion
-"
-
-[node name="UhrGanz" type="Area2D"]
-input_pickable = false
-script = SubResource("GDScript_peag8")
-script_name = "UhrGanz"
-description = "Uhr Ganz"
-clickable = false
-cursor = 1
-interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
-
-[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
-visible = false
-modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-scale = Vector2(0.1, 0.1)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
