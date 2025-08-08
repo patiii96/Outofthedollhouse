@@ -15,12 +15,12 @@ var isbroken = false
 # When the node is clicked
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	E.command_fallback()
+	#E.command_fallback()
 	# For example, you can make the player character walk to this prop, gaze at it, and then say
 	# something:
-#	await C.player.walk_to_clicked()
-#	await C.player.face_clicked()
-#	await C.player.say(\"Not picking that up!\")
+	await C.player.walk_to_clicked()
+	await C.player.face_clicked()
+	await C.player.say(\"This is way too heavy for me.\")
 
 
 func _on_double_click() -> void:
@@ -32,10 +32,10 @@ func _on_double_click() -> void:
 # When the node is right clicked
 func _on_right_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	E.command_fallback()
+	#E.command_fallback()
 	# For example, you can make the player character gaze at this prop and then say something:
-#	await C.player.face_clicked()
-#	await C.player.say(\"A deck of cards\")
+	await C.player.face_clicked()
+	await C.player.say(\"An old clock. What time is it?\")
 
 
 # When the node is middle clicked
@@ -53,7 +53,7 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	if _item == I.Hammer:
 		await C.player.walk_to_clicked()
 		await C.player.face_clicked()
-		await C.player.say(\"SMASH!\")
+		await C.player.say(\"What am I doing?!!\")
 		isbroken = true
 		texture = Uhrkaputt
 		R.get_prop(\"Stundenzeiger\").show()

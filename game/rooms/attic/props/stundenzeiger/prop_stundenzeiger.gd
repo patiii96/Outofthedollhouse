@@ -14,7 +14,7 @@ func _on_click() -> void:
 	# something:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
-	await C.player.say("Einz Zeiger.")
+	await C.player.say("This might be useful. It was telling the wrong time anyway.")
 	
 	R.get_prop("Stundenzeiger").hide()
 	I.Zeiger.add()

@@ -19,10 +19,12 @@ func _on_click() -> void:
 	for kerze in get_tree().get_nodes_in_group("Kerzen"):
 		if not kerze.isLit:
 			all_lit = false
-			await C.player.say("Not picking that up!")
+			await C.player.walk_to_clicked()
+			await C.player.face_clicked()
+			await C.player.say("It is getting nice and cosy in here!")
 			break
 	if all_lit:
-		await C.player.say("Sesame open!.")
+		await C.player.say("Woohoo! What is happening here? Finally I have found my way out of the attic!.")
 		R.get_prop("Luke").texture = R.get_prop("Luke").LukeOffen
 		R.get_prop("Luke").open = true
 
@@ -39,7 +41,7 @@ func _on_right_click() -> void:
 	# E.command_fallback()
 	# For example, you can make the player character gaze at this prop and then say something:
 	await C.player.face_clicked()
-	await C.player.say("Ah. Ein Bannkreis.")
+	await C.player.say("Huh what a funny sketch.")
 
 
 # When the node is middle clicked
@@ -57,7 +59,7 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	if _item == I.Doll:
 		await C.player.walk_to_clicked()
 		await C.player.face_clicked()
-		await C.player.say("I summon you.")
+		await C.player.say("Creating something like this always been on my 'voodoo list', hahahaha!")
 		R.get_prop("DollPentagram").show()
 		I.Doll.remove()
 		

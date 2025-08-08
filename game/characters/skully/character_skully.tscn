@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://u5sstw7dnw0g"]
 
 [ext_resource type="Script" path="res://game/characters/skully/character_skully.gd" id="1_sdefn"]
-[ext_resource type="Texture2D" uid="uid://cye5n8sno5bus" path="res://player/Character_Ausarbeitung_Walking_Left.png" id="2_mfdxj"]
+[ext_resource type="Texture2D" uid="uid://dk2q2jiuqwl3k" path="res://Assets/All Animations spritesheet reorganized.png" id="2_p2jvi"]
 
 [sub_resource type="Animation" id="Animation_moain"]
 length = 0.001
@@ -80,6 +80,6 @@ libraries = {
 texture_filter = 1
 position = Vector2(2, -89)
 scale = Vector2(0.147, 0.147)
-texture = ExtResource("2_mfdxj")
-hframes = 3
-vframes = 3
+texture = ExtResource("2_p2jvi")
+hframes = 6
+vframes = 5

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dicl1p4k1jjnl"]
+[gd_scene load_steps=36 format=3 uid="uid://dicl1p4k1jjnl"]
 
 [ext_resource type="Script" path="res://game/rooms/attic/room_attic.gd" id="1_5yp0j"]
 [ext_resource type="PackedScene" uid="uid://dv6ny6yrqcl03" path="res://game/rooms/attic/walkable_areas/floor/walkable_area_floor.tscn" id="2_gjehx"]
@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://deanv41lhign0" path="res://game/rooms/attic/props/kasten/prop_kasten.tscn" id="16_g0lbm"]
 [ext_resource type="Texture2D" uid="uid://cvuiqavfuv7se" path="res://Assets/kasten.png" id="17_fq5hq"]
 [ext_resource type="PackedScene" uid="uid://ctm3334t6y7rs" path="res://game/rooms/attic/props/kleiderstaender/prop_kleiderstaender.tscn" id="18_6w35f"]
-[ext_resource type="Texture2D" uid="uid://dqof1ytklsabc" path="res://Assets/Kleiderständer.png" id="19_6jm5i"]
 [ext_resource type="PackedScene" uid="uid://tgk5xp7u8ohm" path="res://game/rooms/attic/props/kiste/prop_kiste.tscn" id="20_3c0pm"]
 [ext_resource type="PackedScene" uid="uid://d4a62ydfbe7vx" path="res://game/rooms/attic/props/kisteabgedeckt/prop_kisteabgedeckt.tscn" id="21_q85qx"]
 [ext_resource type="Texture2D" uid="uid://cm57n7b536sm3" path="res://Assets/KisteAbgedeckt.png" id="22_tv0qo"]
@@ -71,6 +70,8 @@ interaction_polygon_position = Vector2(4.52899, 24.9492)
 [node name="Spinnenweben" parent="Props" instance=ExtResource("27_0letp")]
 position = Vector2(325, 311)
 texture = ExtResource("10_67wqu")
+interaction_polygon = PackedVector2Array(-8.79037, -77.9566, 54.8241, -69.8603, 61.7638, 19.2, 51.3542, 49.2723, -0.694, 70.0916, -70.0916, 50.4289, -68.935, -59.4506)
+interaction_polygon_position = Vector2(2.6, -2.6)
 
 [node name="UhrGanz" parent="Props" instance=ExtResource("9_5ispy")]
 position = Vector2(466, 322)
@@ -79,7 +80,7 @@ Uhrkaputt = ExtResource("10_ngf68")
 texture = ExtResource("10_11010")
 clickable = true
 walk_to_point = Vector2(82.247, 118.214)
-interaction_polygon = PackedVector2Array(-53, -189, 51, -194, 52, 181, -58, 182)
+interaction_polygon = PackedVector2Array(-32, -136, 24, -137, 27, 93, -31, 94)
 
 [node name="Stundenzeiger" parent="Props" instance=ExtResource("12_0t5lf")]
 position = Vector2(422, 489)
@@ -87,6 +88,7 @@ rotation = 0.953335
 texture = ExtResource("13_jk18t")
 baseline = -12
 walk_to_point = Vector2(61.5183, 49.4976)
+interaction_polygon = PackedVector2Array(-10.5995, -7.52655, 4.76196, -1.52451, 20.442, -6.33438, 19.6746, 10.2912, 4.5495, 5.68344, -12.1823, 8.52005, -21.7301, 2.9668)
 
 [node name="Bookshelf" parent="Props" instance=ExtResource("14_qylte")]
 position = Vector2(1010, 366)
@@ -94,40 +96,36 @@ input_pickable = true
 texture = ExtResource("15_7npr1")
 clickable = true
 walk_to_point = Vector2(46.021, 126.838)
+interaction_polygon = PackedVector2Array(-96, -88, 103, -87, 110, 57, -95, 58)
 
 [node name="Kasten" parent="Props" instance=ExtResource("16_g0lbm")]
 position = Vector2(140, 321)
 input_pickable = true
 texture = ExtResource("17_fq5hq")
 clickable = true
-
-[node name="Kleiderstaender" parent="Props" instance=ExtResource("18_6w35f")]
-position = Vector2(1009, 458)
-input_pickable = true
-texture = ExtResource("19_6jm5i")
-clickable = true
-walk_to_point = Vector2(-74.6438, 40.9699)
+interaction_polygon = PackedVector2Array(-120, -90, 125, -91, 127, 124, -128, 126)
 
 [node name="Kiste" parent="Props" instance=ExtResource("20_3c0pm")]
-position = Vector2(237, 461)
+position = Vector2(137, 468)
 walk_to_point = Vector2(-285.978, 201.343)
+interaction_polygon = PackedVector2Array(-18, 0, -19, -22, 20, -23, 20, 8, 27, 8, 27, 56, -14, 57, -15, 41, -45, 41, -45, 1)
 
 [node name="Kiste2" parent="Props" instance=ExtResource("20_3c0pm")]
-position = Vector2(213, 482)
+position = Vector2(123, 489)
 rotation = -1.56492
 walk_to_point = Vector2(-285.978, 201.343)
 
 [node name="Hammer" parent="Props" instance=ExtResource("7_tr4mm")]
-position = Vector2(196, 500)
+position = Vector2(63, 492)
 rotation = -0.862734
 texture = ExtResource("8_qw2rm")
 baseline = -5
 walk_to_point = Vector2(-72, -9)
-interaction_polygon = PackedVector2Array(92.8472, -14.3703, 168.659, -10.707, 148.742, 32.5923, 100.043, 31.4841)
+interaction_polygon = PackedVector2Array(118.524, 13.316, 109.632, 9.0809, 109.424, -6.53821, 141.854, -4.02524, 161.916, 2.49399, 135.121, 9.6376, 135.418, 60.7249, 117.738, 60.0641)
 interaction_polygon_position = Vector2(-126.864, -33.8207)
 
 [node name="Kiste3" parent="Props" instance=ExtResource("20_3c0pm")]
-position = Vector2(243, 495)
+position = Vector2(141, 505)
 rotation = 3.10997
 walk_to_point = Vector2(-285.978, 201.343)
 
@@ -136,17 +134,24 @@ position = Vector2(1109, 436)
 input_pickable = true
 texture = ExtResource("22_tv0qo")
 clickable = true
-
-[node name="Kisteabgedeckt3" parent="Props" instance=ExtResource("21_q85qx")]
-position = Vector2(1105, 597)
-scale = Vector2(1.19032, 1.19614)
-input_pickable = true
-texture = ExtResource("22_tv0qo")
-clickable = true
+interaction_polygon = PackedVector2Array(-49, -38, 32, -38, 33, 211, -63, 211, -59, 110, -99, 111, -102, 13, -58, 13)
 
 [node name="Kisteabgedeckt2" parent="Props" instance=ExtResource("21_q85qx")]
 position = Vector2(1077, 492)
 scale = Vector2(1.39722, 1.15415)
+input_pickable = true
+texture = ExtResource("22_tv0qo")
+clickable = true
+
+[node name="Kleiderstaender" parent="Props" instance=ExtResource("18_6w35f")]
+position = Vector2(1009, 458)
+input_pickable = true
+clickable = true
+walk_to_point = Vector2(-74.6438, 40.9699)
+
+[node name="Kisteabgedeckt3" parent="Props" instance=ExtResource("21_q85qx")]
+position = Vector2(1105, 597)
+scale = Vector2(1.19032, 1.19614)
 input_pickable = true
 texture = ExtResource("22_tv0qo")
 clickable = true
@@ -159,14 +164,15 @@ texture = ExtResource("24_nlsgm")
 clickable = true
 baseline = 212
 walk_to_point = Vector2(-4.49487, 184.292)
-interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+interaction_polygon = PackedVector2Array(231.143, -212.854, 297.184, -263.484, 630.691, -132.259, 640.597, -356.478, -643.899, -356.478, -643.899, -20.6654, -617.483, -19.6321, -472.193, -193.222, -308.191, -258.318, -226.741, -209.754, -198.123, -211.82, -127.679, -331.68, -70.4437, -352.345, 71.5444, -352.345, 127.679, -323.414, 199.224, -213.887)
 
 [node name="Kerze" parent="Props" groups=["Kerzen"] instance=ExtResource("25_um5t5")]
 position = Vector2(487, 460)
 texture = ExtResource("26_pxkuw")
 frames = 5
 v_frames = 0
-walk_to_point = Vector2(-3.53549, 10.6066)
+baseline = 28
+walk_to_point = Vector2(-47.5852, 31.2966)
 always_on_top = true
 interaction_polygon = PackedVector2Array(8, -29, 29, -28, 30, 30, 10, 29)
 
@@ -175,7 +181,8 @@ position = Vector2(674, 519)
 texture = ExtResource("26_pxkuw")
 frames = 5
 v_frames = 0
-walk_to_point = Vector2(-3.53549, 10.6066)
+baseline = 25
+walk_to_point = Vector2(50.5255, 69.3396)
 always_on_top = true
 interaction_polygon = PackedVector2Array(8, -29, 29, -28, 30, 30, 10, 29)
 
@@ -184,7 +191,8 @@ position = Vector2(575, 575)
 texture = ExtResource("26_pxkuw")
 frames = 5
 v_frames = 0
-walk_to_point = Vector2(-3.53549, 10.6066)
+baseline = 32
+walk_to_point = Vector2(111.261, 31.2966)
 always_on_top = true
 interaction_polygon = PackedVector2Array(8, -29, 29, -28, 30, 30, 10, 29)
 
@@ -193,7 +201,8 @@ position = Vector2(615, 448)
 texture = ExtResource("26_pxkuw")
 frames = 5
 v_frames = 0
-walk_to_point = Vector2(-3.53549, 10.6066)
+baseline = 21
+walk_to_point = Vector2(94.5753, 15.946)
 always_on_top = true
 interaction_polygon = PackedVector2Array(8, -29, 29, -28, 30, 30, 10, 29)
 
@@ -202,7 +211,8 @@ position = Vector2(460, 528)
 texture = ExtResource("26_pxkuw")
 frames = 5
 v_frames = 0
-walk_to_point = Vector2(-3.53549, 10.6066)
+baseline = 27
+walk_to_point = Vector2(-37.5739, 61.3306)
 always_on_top = true
 interaction_polygon = PackedVector2Array(8, -29, 29, -28, 30, 30, 10, 29)
 
@@ -217,9 +227,10 @@ position = Vector2(70, 581)
 texture = ExtResource("31_r2mse")
 baseline = -17
 walk_to_point = Vector2(73.6222, 20.7653)
+interaction_polygon = PackedVector2Array(-16, -18, 1, -26, 15, -18, 16, 16, -15, 16)
 
 [node name="Doll" parent="Props" instance=ExtResource("32_21jlt")]
-position = Vector2(312, 433)
+position = Vector2(328, 431)
 texture = ExtResource("33_wx6be")
 baseline = 3
 walk_to_point = Vector2(141.968, 3.17828)
@@ -235,10 +246,10 @@ walk_to_point = Vector2(-5.24402, -74.1662)
 [node name="Hotspots" type="Node2D" parent="."]
 
 [node name="Window" parent="Hotspots" instance=ExtResource("7_0khcs")]
-position = Vector2(576, 324)
+position = Vector2(568, 334)
 baseline = -95
 walk_to_point = Vector2(-416.529, 68.9222)
-interaction_polygon = PackedVector2Array(-17, -19, 73, -17, 75, 148, -16, 145)
+interaction_polygon = PackedVector2Array(549, -16, 651, -11, 651, 145, 552, 145)
 interaction_polygon_position = Vector2(-329, -140)
 
 [node name="Regions" type="Node2D" parent="."]
