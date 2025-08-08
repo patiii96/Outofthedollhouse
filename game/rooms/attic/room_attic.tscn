@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dicl1p4k1jjnl"]
+[gd_scene load_steps=16 format=3 uid="uid://dicl1p4k1jjnl"]
 
 [ext_resource type="Script" path="res://game/rooms/attic/room_attic.gd" id="1_5yp0j"]
 [ext_resource type="PackedScene" uid="uid://dv6ny6yrqcl03" path="res://game/rooms/attic/walkable_areas/floor/walkable_area_floor.tscn" id="2_gjehx"]
@@ -7,7 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://b0sl13ulx085q" path="res://game/rooms/attic/props/bannkreis/prop_bannkreis.tscn" id="5_oqux2"]
 [ext_resource type="Texture2D" uid="uid://dp5sabinuobs0" path="res://Assets/bannkreis.png" id="6_ms1p2"]
 [ext_resource type="PackedScene" uid="uid://dxhv71jg255fm" path="res://game/rooms/attic/hotspots/window/hotspot_window.tscn" id="7_0khcs"]
+[ext_resource type="PackedScene" uid="uid://clm1pqund8f3g" path="res://game/rooms/attic/props/hammer/prop_hammer.tscn" id="7_tr4mm"]
+[ext_resource type="Texture2D" uid="uid://rmvgobg3f2lv" path="res://Assets/Hammer.png" id="8_qw2rm"]
+[ext_resource type="PackedScene" uid="uid://b1le7lmnujfio" path="res://game/rooms/attic/props/uhr_ganz/prop_uhr_ganz.tscn" id="9_5ispy"]
 [ext_resource type="PackedScene" uid="uid://u5sstw7dnw0g" path="res://game/characters/skully/character_skully.tscn" id="9_21om0"]
+[ext_resource type="Texture2D" uid="uid://8secbl7vg1pj" path="res://Assets/Uhr_mit_Zeigern.png" id="10_11010"]
+[ext_resource type="Texture2D" uid="uid://bl5ve8vb1c7ew" path="res://Assets/Uhr_ohne_Zeiger.png" id="10_ngf68"]
+[ext_resource type="PackedScene" uid="uid://p8sjvf4u0x8e" path="res://game/rooms/attic/props/stundenzeiger/prop_stundenzeiger.tscn" id="12_0t5lf"]
+[ext_resource type="Texture2D" uid="uid://b2finom03fh20" path="res://Assets/Stundenzeiger.png" id="13_jk18t"]
 
 [node name="RoomAttic" type="Node2D"]
 script = ExtResource("1_5yp0j")
@@ -24,6 +31,7 @@ popochiu_placeholder = null
 
 [node name="Background" parent="Props" instance=ExtResource("3_xcp2d")]
 position = Vector2(576, 324)
+scale = Vector2(0.897155, 0.894366)
 texture = ExtResource("4_yvt3s")
 baseline = -360
 walk_to_point = Vector2(320.638, -368.583)
@@ -39,6 +47,31 @@ baseline = -86
 walk_to_point = Vector2(-196.001, 1.39685)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 interaction_polygon_position = Vector2(4.52899, 24.9492)
+
+[node name="Hammer" parent="Props" instance=ExtResource("7_tr4mm")]
+position = Vector2(376, 544)
+rotation = -0.862734
+texture = ExtResource("8_qw2rm")
+baseline = -5
+walk_to_point = Vector2(-72, -9)
+interaction_polygon = PackedVector2Array(92.8472, -14.3703, 168.659, -10.707, 148.742, 32.5923, 100.043, 31.4841)
+interaction_polygon_position = Vector2(-126.864, -33.8207)
+
+[node name="UhrGanz" parent="Props" instance=ExtResource("9_5ispy")]
+position = Vector2(942, 276)
+input_pickable = true
+Uhrkaputt = ExtResource("10_ngf68")
+texture = ExtResource("10_11010")
+clickable = true
+walk_to_point = Vector2(93.4717, 172.092)
+interaction_polygon = PackedVector2Array(-53, -189, 51, -194, 52, 181, -58, 182)
+
+[node name="Stundenzeiger" parent="Props" instance=ExtResource("12_0t5lf")]
+position = Vector2(851, 528)
+rotation = 0.953335
+texture = ExtResource("13_jk18t")
+baseline = -12
+walk_to_point = Vector2(61.5183, 49.4976)
 
 [node name="Hotspots" type="Node2D" parent="."]
 

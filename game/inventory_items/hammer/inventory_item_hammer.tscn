@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7gnwcpcy3tji"]
+
+[ext_resource type="Script" path="res://game/inventory_items/hammer/inventory_item_hammer.gd" id="1_ih1vh"]
+[ext_resource type="Texture2D" uid="uid://jo8ikg30pe8k" path="res://Assets/Hammer_256.png" id="1_u4yrr"]
+
+[node name="ItemHammer" type="TextureRect"]
+texture_filter = 1
+offset_right = 3000.0
+offset_bottom = 3000.0
+scale = Vector2(0.027573, 0.027573)
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_u4yrr")
+stretch_mode = 5
+script = ExtResource("1_ih1vh")
+script_name = "Hammer"
+description = "Hammer"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://u5sstw7dnw0g"]
+[gd_scene load_steps=8 format=3 uid="uid://u5sstw7dnw0g"]
 
 [ext_resource type="Script" path="res://game/characters/skully/character_skully.gd" id="1_sdefn"]
 [ext_resource type="Texture2D" uid="uid://cye5n8sno5bus" path="res://player/Character_Ausarbeitung_Walking_Left.png" id="2_mfdxj"]
@@ -38,9 +38,13 @@ tracks/0/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_mcf36"]
+resource_name = "grab"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ij1u3"]
 _data = {
 "RESET": SubResource("Animation_moain"),
+"grab": SubResource("Animation_mcf36"),
 "idle": SubResource("Animation_8mlhq"),
 "walk": SubResource("Animation_i47xo")
 }

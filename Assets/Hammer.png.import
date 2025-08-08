@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyi7fev8t58dw"
-path="res://.godot/imported/Uhrzeiger.png-12d8137847b7784c2da5bc353d8491c9.ctex"
+uid="uid://rmvgobg3f2lv"
+path="res://.godot/imported/Hammer.png-0ecade54784dc4e6d626dc755307e6a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Uhrzeiger.png"
-dest_files=["res://.godot/imported/Uhrzeiger.png-12d8137847b7784c2da5bc353d8491c9.ctex"]
+source_file="res://Assets/Hammer.png"
+dest_files=["res://.godot/imported/Hammer.png-0ecade54784dc4e6d626dc755307e6a7.ctex"]
 
 [params]
 

@@ -11,6 +11,7 @@ var state: Data = load("res://game/rooms/attic/room_attic.tres")
 # tree but it is not visible
 func _on_room_entered() -> void:
 	A.backgroundmusic.play(1)
+	R.get_prop("Stundenzeiger").hide()
 
 
 # What happens when the room changing transition finishes. At this point the room

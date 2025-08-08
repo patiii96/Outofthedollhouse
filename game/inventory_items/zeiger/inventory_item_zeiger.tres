@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cchoftllimvx4"]
+
+[ext_resource type="Script" path="res://game/inventory_items/zeiger/inventory_item_zeiger_state.gd" id="1_6yhmd"]
+
+[resource]
+resource_name = "Zeiger"
+script = ExtResource("1_6yhmd")
+script_name = "Zeiger"
+scene = "res://game/inventory_items/zeiger/inventory_item_zeiger.tscn"
