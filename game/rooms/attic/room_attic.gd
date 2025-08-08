@@ -12,7 +12,7 @@ var state: Data = load("res://game/rooms/attic/room_attic.tres")
 func _on_room_entered() -> void:
 	A.backgroundmusic.play(1)
 	R.get_prop("Stundenzeiger").hide()
-	R.get_prop("Spinnenweben").hide()
+	R.get_prop("Doll").hide()
 
 
 # What happens when the room changing transition finishes. At this point the room

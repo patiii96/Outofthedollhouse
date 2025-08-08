@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dicl1p4k1jjnl"]
+[gd_scene load_steps=36 format=3 uid="uid://dicl1p4k1jjnl"]
 
 [ext_resource type="Script" path="res://game/rooms/attic/room_attic.gd" id="1_5yp0j"]
 [ext_resource type="PackedScene" uid="uid://dv6ny6yrqcl03" path="res://game/rooms/attic/walkable_areas/floor/walkable_area_floor.tscn" id="2_gjehx"]
@@ -33,13 +33,14 @@
 [ext_resource type="PackedScene" uid="uid://bhnc3r506bl1" path="res://game/rooms/attic/props/luke/prop_luke.tscn" id="29_m5v33"]
 [ext_resource type="PackedScene" uid="uid://f3j2n5vsb4eu" path="res://game/rooms/attic/props/lamp/prop_lamp.tscn" id="30_og8ik"]
 [ext_resource type="Texture2D" uid="uid://b8g1kytifbds7" path="res://Assets/PeLaLicht2.png" id="31_r2mse"]
+[ext_resource type="PackedScene" uid="uid://dsb1vdaolq0jm" path="res://game/rooms/attic/props/doll/prop_doll.tscn" id="32_21jlt"]
+[ext_resource type="Texture2D" uid="uid://dlxt22ewmasqd" path="res://Assets/voododoll.png" id="33_wx6be"]
 
 [node name="RoomAttic" type="Node2D"]
 script = ExtResource("1_5yp0j")
 script_name = "Attic"
 width = 1152
 height = 648
-popochiu_placeholder = null
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
@@ -195,6 +196,13 @@ position = Vector2(70, 581)
 texture = ExtResource("31_r2mse")
 baseline = -17
 walk_to_point = Vector2(73.6222, 20.7653)
+
+[node name="Doll" parent="Props" instance=ExtResource("32_21jlt")]
+position = Vector2(312, 433)
+texture = ExtResource("33_wx6be")
+baseline = 3
+walk_to_point = Vector2(141.968, 3.17828)
+interaction_polygon = PackedVector2Array(-49, -52, 47, -47, 41, 50, -33, 50)
 
 [node name="Hotspots" type="Node2D" parent="."]
 
