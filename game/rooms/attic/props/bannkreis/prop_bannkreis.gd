@@ -14,7 +14,17 @@ func _on_click() -> void:
 	# something:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
-	await C.player.say("Not picking that up!")
+	
+	var all_lit = true
+	for kerze in get_tree().get_nodes_in_group("Kerzen"):
+		if not kerze.isLit:
+			all_lit = false
+			await C.player.say("Not picking that up!")
+			break
+	if all_lit:
+		await C.player.say("Sesame open!.")
+		R.get_prop("Luke").texture = R.get_prop("Luke").LukeOffen
+		R.get_prop("Luke").open = true
 
 
 func _on_double_click() -> void:

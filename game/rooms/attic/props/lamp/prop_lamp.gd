@@ -14,7 +14,7 @@ func _on_click() -> void:
 	# something:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
-	await C.player.say("Yoink!")
+	C.player.say("Yoink!")
 	I.Lamp.add()
 	self.hide()
 

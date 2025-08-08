@@ -10,6 +10,7 @@ extends PopochiuProp
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
 	E.command_fallback()
+	
 	# For example, you can make the player character walk to this prop, gaze at it, and then say
 	# something:
 #	await C.player.walk_to_clicked()

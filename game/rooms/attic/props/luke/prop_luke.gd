@@ -5,15 +5,20 @@ extends PopochiuProp
 # the function until the sequence of events finishes.
 @export var LukeZu:Texture2D
 @export var LukeOffen:Texture2D
-var open = false
+@export var open = false
 
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	E.command_fallback()
 	# For example, you can make the player character walk to this prop, gaze at it, and then say
 	# something:
+	if open:
+		await C.player.walk_to_clicked()
+		texture = LukeOffen
+		await C.player.say("I am finally free")
+	else:
+		await C.player.say("This is my escape, but magic runes are blocking it.")
 #	await C.player.walk_to_clicked()
 #	await C.player.face_clicked()
 #	await C.player.say("Not picking that up!")
@@ -43,18 +48,13 @@ func _on_middle_click() -> void:
 # When the node is clicked and there is an inventory item selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	#E.command_fallback()
+	E.command_fallback()
 	# For example, you can make the player character say something when the Key item is used in this
 	# prop. Note that you have to change the name of the `_item` parameter to `item`.
 #	if item == I.Key:
 #		await C.player.say("I can't do that")
 
-	if _item == I.Hammer: #welches Item??
-		await C.player.walk_to_clicked()
-		await C.player.face_clicked()
-		await C.player.say("YOU ARE FREE!")
-		open = true
-		texture = LukeOffen
+	
 		#R.get_prop("Stundenzeiger").show()
 
 
