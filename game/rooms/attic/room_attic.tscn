@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bye5wgbgis1pl" path="res://game/rooms/attic/props/background/prop_background.tscn" id="3_xcp2d"]
 [ext_resource type="Texture2D" uid="uid://blpqy2l2q63u6" path="res://environment/Screenshot_2025-08-07_135344.png" id="4_yvt3s"]
 [ext_resource type="PackedScene" uid="uid://b0sl13ulx085q" path="res://game/rooms/attic/props/bannkreis/prop_bannkreis.tscn" id="5_oqux2"]
-[ext_resource type="Texture2D" uid="uid://bho8rwxnvsk8c" path="res://game/rooms/attic/props/bannkreis/bannkreis.png" id="6_urnb7"]
+[ext_resource type="Texture2D" uid="uid://dp5sabinuobs0" path="res://Assets/bannkreis.png" id="6_ms1p2"]
 [ext_resource type="PackedScene" uid="uid://dxhv71jg255fm" path="res://game/rooms/attic/hotspots/window/hotspot_window.tscn" id="7_0khcs"]
 [ext_resource type="PackedScene" uid="uid://u5sstw7dnw0g" path="res://game/characters/skully/character_skully.tscn" id="9_21om0"]
 
@@ -30,10 +30,10 @@ walk_to_point = Vector2(320.638, -368.583)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Bannkreis" parent="Props" instance=ExtResource("5_oqux2")]
-position = Vector2(589, 529)
+position = Vector2(585, 562)
 scale = Vector2(0.662404, 0.601223)
 input_pickable = true
-texture = ExtResource("6_urnb7")
+texture = ExtResource("6_ms1p2")
 clickable = true
 baseline = -86
 walk_to_point = Vector2(-196.001, 1.39685)
