@@ -60,7 +60,6 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_rvee3")
 offset = Vector2(35.5, 0)
 hframes = 5
-frame = 2
 region_rect = Rect2(11, 0, 462, 119)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
