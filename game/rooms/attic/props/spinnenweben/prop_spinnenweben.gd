@@ -51,6 +51,7 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		await C.player.say("Hocus Pocus!")
 		R.get_prop("Doll").show()
 		R.get_prop("Spinnenweben").hide()
+		I.Zeiger.remove()
 
 
 # When an inventory item linked to this Prop (link_to_item) is removed from

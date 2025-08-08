@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dicl1p4k1jjnl"]
+[gd_scene load_steps=37 format=3 uid="uid://dicl1p4k1jjnl"]
 
 [ext_resource type="Script" path="res://game/rooms/attic/room_attic.gd" id="1_5yp0j"]
 [ext_resource type="PackedScene" uid="uid://dv6ny6yrqcl03" path="res://game/rooms/attic/walkable_areas/floor/walkable_area_floor.tscn" id="2_gjehx"]
@@ -35,12 +35,14 @@
 [ext_resource type="Texture2D" uid="uid://b8g1kytifbds7" path="res://Assets/PeLaLicht2.png" id="31_r2mse"]
 [ext_resource type="PackedScene" uid="uid://dsb1vdaolq0jm" path="res://game/rooms/attic/props/doll/prop_doll.tscn" id="32_21jlt"]
 [ext_resource type="Texture2D" uid="uid://dlxt22ewmasqd" path="res://Assets/voododoll.png" id="33_wx6be"]
+[ext_resource type="PackedScene" uid="uid://dfnnbrmc75fot" path="res://game/rooms/attic/props/doll_pentagram/prop_doll_pentagram.tscn" id="34_kfqnu"]
 
 [node name="RoomAttic" type="Node2D"]
 script = ExtResource("1_5yp0j")
 script_name = "Attic"
 width = 1152
 height = 648
+popochiu_placeholder = null
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
@@ -64,7 +66,7 @@ texture = ExtResource("6_ms1p2")
 clickable = true
 baseline = -86
 walk_to_point = Vector2(-196.001, 1.39685)
-interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+interaction_polygon = PackedVector2Array(-110.205, -91.4803, -21.1351, -88.1537, 66.4247, -103.123, 67.9344, -43.2453, 110.205, -4.98993, 46.7993, 21.6225, 9.05792, 49.8982, -52.8378, 34.9287, -120.772, 9.97955, -90.5792, -29.9391)
 interaction_polygon_position = Vector2(4.52899, 24.9492)
 
 [node name="Spinnenweben" parent="Props" instance=ExtResource("27_0letp")]
@@ -72,16 +74,16 @@ position = Vector2(325, 311)
 texture = ExtResource("10_67wqu")
 
 [node name="UhrGanz" parent="Props" instance=ExtResource("9_5ispy")]
-position = Vector2(399, 322)
+position = Vector2(466, 322)
 input_pickable = true
 Uhrkaputt = ExtResource("10_ngf68")
 texture = ExtResource("10_11010")
 clickable = true
-walk_to_point = Vector2(93.4717, 172.092)
+walk_to_point = Vector2(82.247, 118.214)
 interaction_polygon = PackedVector2Array(-53, -189, 51, -194, 52, 181, -58, 182)
 
 [node name="Stundenzeiger" parent="Props" instance=ExtResource("12_0t5lf")]
-position = Vector2(394, 501)
+position = Vector2(422, 489)
 rotation = 0.953335
 texture = ExtResource("13_jk18t")
 baseline = -12
@@ -203,6 +205,13 @@ texture = ExtResource("33_wx6be")
 baseline = 3
 walk_to_point = Vector2(141.968, 3.17828)
 interaction_polygon = PackedVector2Array(-49, -52, 47, -47, 41, 50, -33, 50)
+
+[node name="DollPentagram" parent="Props" instance=ExtResource("34_kfqnu")]
+position = Vector2(578, 533)
+rotation = -1.22229
+texture = ExtResource("33_wx6be")
+baseline = -8
+walk_to_point = Vector2(-5.24402, -74.1662)
 
 [node name="Hotspots" type="Node2D" parent="."]
 
